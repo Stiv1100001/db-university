@@ -15,7 +15,7 @@ WHERE `cfu` > 10;
 
 SELECT *
 FROM `students`
-WHERE (DATEDIFF(NOW(), `date_of_birth`) / 365) > 30;
+WHERE TIMESTAMPDIFF(YEAR, NOW(), `date_of_birth`) > 30;
 
 -- ES 4
 
@@ -35,7 +35,7 @@ WHERE `date` = '2020-06-20'
 
 SELECT *
 FROM `degrees`
-WHERE `level` LIKE 'magistrale';
+WHERE `level` = 'magistrale';
 
 -- ES 7
 
