@@ -35,7 +35,7 @@ WHERE `date` = '2020-06-20'
 
 SELECT *
 FROM `degrees`
-WHERE `name` LIKE '%Magistrale%';
+WHERE `level` LIKE 'magistrale';
 
 -- ES 7
 
