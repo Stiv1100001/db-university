@@ -44,7 +44,7 @@ FROM `departments`;
 
 -- ES 8
 
-SELECT *
+SELECT COUNT(*) as `n`
 FROM `teachers`
 WHERE `phone` IS NULL;
 
