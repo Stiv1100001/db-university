@@ -62,5 +62,6 @@ FROM `students`
 JOIN `exam_student` ON `students`.`id` = `exam_student`.`student_id`
 JOIN `exams` ON `exam_student`.`exam_id` = `exams`.`id`
 JOIN `courses` ON `exams`.`course_id` = `courses`.`id`
-GROUP BY `exams`.`name`;
+GROUP BY `students`.`id`,
+         `courses`.`id`;
 
