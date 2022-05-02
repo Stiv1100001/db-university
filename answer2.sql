@@ -45,7 +45,7 @@ JOIN `teachers` ON `course_teacher`.`teacher_id` = `teachers`.`id`;
 
 -- ES 6
 
-SELECT `teachers`.*
+SELECT DISTINCT `teachers`.*
 FROM `teachers`
 JOIN `course_teacher` ON `teachers`.`id` = `course_teacher`.`teacher_id`
 JOIN `courses` ON `course_teacher`.`course_id` = `courses`.`id`
@@ -62,5 +62,5 @@ FROM `students`
 JOIN `exam_student` ON `students`.`id` = `exam_student`.`student_id`
 JOIN `exams` ON `exam_student`.`exam_id` = `exams`.`id`
 JOIN `courses` ON `exams`.`course_id` = `courses`.`id`
-GROUP BY `exams`.`id`;
+GROUP BY `exams`.`name`;
 
